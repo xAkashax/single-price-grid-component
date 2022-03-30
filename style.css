@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+ 
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-lighter: rgba(42, 178, 176, 0.849);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --light-gray-lighter: hsla(203, 44%, 93%, 0.527);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --box-shadow-gray: hsla(0, 13%, 78%, 0.342);
+    --fw-400: 400;
+    --fw-600: 600;
+    --fz: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Karla', sans-serif;
+    /* overflow: hidden; */
+    font-size: var(--fz);
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page {
+    max-width: 375px;
+    margin: 25px auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px var(--box-shadow-gray);
+}
+
+.box {
+    flex-grow: 1;
+    flex-basis: 30vh;
+    padding: 20px;
+    color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box:nth-child(2) {
+    background-color: var(--cyan);
+}
+
+.box:nth-child(3) {
+    background-color: var(--cyan-lighter);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.title1, .title1 + h2, .paragraph1, .title3 .paragraph3  {
+    padding: 10px 4%;
+}
+
+.title1 {
+    color: var(--cyan);
+}
+
+.title1 + h2 {
+    color: var(--bright-yellow);
+    font-size: 18px;
+}
+
+.paragraph1 {
+    color: var(--grayish-blue);
+    line-height: 2;
+}
+
+.title2, .cash, .paragraph2, .btn {
+    padding: 10px 4%;
+    font-size: 18px;
+}
+
+.title2 {
+    font-size: 20px;
+    margin-bottom: -35px;
+}
+
+.cash {
+    font-weight: var(--fw-400);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: -35px;
+}
+
+.cash span {
+    font-size: 42px;
+    font-weight: var(--fw-600);
+}
+
+.cash p {
+    color: var(--light-gray-lighter);
+    padding-left: 15px;
+}
+
+.btn {
+    width: 90%;
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    line-height: 2;
+    text-align: center;
+    background-color: var(--bright-yellow);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px var(--box-shadow-gray);
+    padding-bottom: 10px;
+}
+
+.title3 {
+    padding:  0 4%;
+}
+
+.paragraph3 {
+    color: var(--light-gray);
+    font-size: var(--fw-400);
+    line-height: 1.6;
+    white-space: pre-line;  
+    padding: 0 4% 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
