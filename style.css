@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
- 
+
 
 :root {
     --cyan: hsl(179, 62%, 43%);
@@ -8,7 +8,7 @@
     --light-gray: hsl(204, 43%, 93%);
     --light-gray-lighter: hsla(203, 44%, 93%, 0.527);
     --grayish-blue: hsl(218, 22%, 67%);
-    --box-shadow-gray: hsla(0, 13%, 78%, 0.342);
+    --box-shadow-gray: hsla(0, 4%, 26%, 0.29);
     --fw-400: 400;
     --fw-600: 600;
     --fz: 16px;
@@ -21,19 +21,22 @@
 }
 
 html {
-    font-family: 'Karla', sans-serif;
-    /* overflow: hidden; */
+    font-family: 'Karla', sans-serif; 
     font-size: var(--fz);
+    overflow-x: hidden;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     width: 100%;
 }
 
 .page {
     max-width: 375px;
-    margin: 25px auto;
 }
 
 .container {
@@ -44,13 +47,13 @@ body {
 }
 
 .box {
-    flex-grow: 1;
-    flex-basis: 30vh;
-    padding: 20px;
-    color: var(--light-gray);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: 33.3%;
+    padding: 20px;
+    color: var(--light-gray);
 }
 
 .box:nth-child(2) {
@@ -63,7 +66,10 @@ body {
     border-bottom-right-radius: 5px;
 }
 
-.title1, .title1 + h2, .paragraph1, .title3 .paragraph3  {
+.title1,
+.title1+h2,
+.paragraph1,
+.title3 .paragraph3 {
     padding: 10px 4%;
 }
 
@@ -71,32 +77,34 @@ body {
     color: var(--cyan);
 }
 
-.title1 + h2 {
+.title1+h2 {
     color: var(--bright-yellow);
     font-size: 18px;
 }
 
 .paragraph1 {
     color: var(--grayish-blue);
-    line-height: 2;
+    line-height: 1.8;
 }
 
-.title2, .cash, .paragraph2, .btn {
-    padding: 10px 4%;
+.title2,
+.cash,
+.paragraph2,
+.btn {
     font-size: 18px;
+    padding: 10px 4%;
 }
 
 .title2 {
     font-size: 20px;
-    margin-bottom: -35px;
+    margin-bottom: 5px;
 }
 
 .cash {
-    font-weight: var(--fw-400);
-    width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: -35px;
+    width: 100%;
+    font-weight: var(--fw-400);
 }
 
 .cash span {
@@ -110,8 +118,8 @@ body {
 }
 
 .btn {
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 25px 10px 10px;
     text-decoration: none;
     color: white;
     line-height: 2;
@@ -119,31 +127,78 @@ body {
     background-color: var(--bright-yellow);
     border-radius: 5px;
     box-shadow: 0 0 10px 1px var(--box-shadow-gray);
-    padding-bottom: 10px;
 }
 
 .title3 {
-    padding:  0 4%;
+    padding: 0 4%;
 }
 
 .paragraph3 {
+    padding: 0 4% 10px;
     color: var(--light-gray);
     font-size: var(--fw-400);
     line-height: 1.6;
     white-space: pre-line;  
-    padding: 0 4% 10px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 
+@media (min-width: 1440px) {
 
+    .page {
+        max-width: 1440px;
+        width: 750px;
+        margin: 0 auto;
+    }
 
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
+    .box:nth-child(1) {
+        align-items: stretch;
+        flex-basis: 100%;
+    }
 
+    .box:nth-child(2) {
+        border-bottom-left-radius: 5px;
+    }
 
+    .box:nth-child(3) {
+        border-bottom-left-radius: 0px;
+    }
 
+    .title1,
+    .title1+h2,
+    .paragraph1,
+    .title3 .paragraph3 {
+        padding: 15px 4%;
+    }
 
+    .title2,
+    .cash,
+    .paragraph2,
+    .btn {
+        padding: 10px 25px;
+    }
 
+    .btn {
+        width: 85%;
+        margin: 25px auto 13px;
+        transition: .5s linear;
+    }
 
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+    .btn:hover {
+        color: hsl(175, 94%, 13%);
+        box-shadow: 0 0 10px 2px hsl(175, 94%, 13%);
+    }
+}
